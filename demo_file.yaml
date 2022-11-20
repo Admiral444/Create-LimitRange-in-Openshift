@@ -12,25 +12,19 @@ spec:
         cpu: "10m"
         memory: "5Mi"
     - type: "Container"
-      max:
+      max:                                  # maximum no. CPU and memory container can use inside pod
         cpu: "500m"
         memory: "750Mi"
-      min:
+      min:                                  # minimum no. CPU and memory container can use inside pod
         cpu: "10m"
         memory: "5Mi"
-      default:
+      default:                              # The default maximum no. of CPU and memory an individual container can consume.
         cpu: "100m"
         memory: "100Mi"
-      max:
-        cpu: "500m"
-        memory: "750Mi"
-      min:
-        cpu: "10m"
-        memory: "5Mi"
-    - type: openshift.io/Image
+    - type: openshift.io/Image              # maximum image size can be pushed
       max:
         storage: 1Gi
-    - type: openshift.io/ImageStream        # maximum number of image tags and versions that an imagestream resourse allow
+    - type: openshift.io/ImageStream        # maximum no. of image tags and versions that an imagestream resourse allow
       max:
         openshift.io/image-tags: 10
         openshift.io/images: 20
