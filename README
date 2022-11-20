@@ -19,4 +19,3 @@ You created a limitrange resource
 if you notice we haven,t pass any project name inside the demo_file.yml
 it's because we create limitrange inside a project
 so the limit-range are set for the current project/namespace that you are in.
-     
