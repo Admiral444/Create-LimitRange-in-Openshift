@@ -1,0 +1,22 @@
+Create LimitRange Resource
+
+Step1: download the "demo_file.yml"
+       rename the file as per your understanding
+       
+Step2: Open the file and edit it as your requirment 
+       like how much cpu or memory or storage you want to set limit for
+       just change the no. inside the file
+       or you can remove some "- types"
+       
+Step3: create a limitrange resource, same way we create other resource 
+       
+[ ]# oc create --save-config -f demo_file.yml
+[ ]# oc get limitrange
+      
+Thas all... 
+You created a limitrange resource
+
+if you notice we haven,t pass any project name inside the demo_file.yml
+it's because we create limitrange inside a project
+so the limit-range are set for the current project/namespace that you are in.
+     
