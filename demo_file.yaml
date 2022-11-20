@@ -12,10 +12,10 @@ spec:
         cpu: "10m"
         memory: "5Mi"
     - type: "Container"
-      max:                                  # maximum no. CPU and memory container can use inside pod
+      max:                                  # maximum no. CPU and memory container can use inside pod, container that exceeds the maximum limits does not create
         cpu: "500m"
         memory: "750Mi"
-      min:                                  # minimum no. CPU and memory container can use inside pod
+      min:                                  # minimum no. CPU and memory container can use inside pod, container that does not meet minimum requirment/limits does not create
         cpu: "10m"
         memory: "5Mi"
       default:                              # The default maximum no. of CPU and memory an individual container can consume.
