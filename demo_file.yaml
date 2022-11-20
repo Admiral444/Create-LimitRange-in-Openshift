@@ -30,7 +30,7 @@ spec:
     - type: openshift.io/Image
       max:
         storage: 1Gi
-    - type: openshift.io/ImageStream
+    - type: openshift.io/ImageStream        # maximum number of image tags and versions that an imagestream resourse allow
       max:
         openshift.io/image-tags: 10
         openshift.io/images: 20
